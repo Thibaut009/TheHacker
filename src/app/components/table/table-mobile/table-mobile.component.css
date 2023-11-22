@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; /* Ajoutez cette ligne pour des bords arrondis */
+    overflow: hidden; /* Pour s'assurer que les bords arrondis sont corrects */
+}
+
+th, td {
+    color: var(--text-color);
+    border: 4px solid var(--text-color);
+    padding: 8px;
+    border-radius: 5px; /* Ajoutez cette ligne pour des bords arrondis */
+}
+
+td {
+    text-align: justify;
+}

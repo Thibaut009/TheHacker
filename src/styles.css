@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: var(--orange-gradient);
+    overflow-x: hidden;
+}
+
+:root {
+    --primary-color: #222222;
+    --secondary-color: rgb(255, 132, 0);
+    --orange-gradient: radial-gradient(rgb(254, 198, 156), 20%, rgb(205, 91, 4), rgb(158, 72, 6));
+    --text-color: #fff;
+}

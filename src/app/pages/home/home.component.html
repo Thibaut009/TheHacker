@@ -1,0 +1,234 @@
+<header class="section_header">
+    <div class="header_content">
+        <h1>The Hackers</h1>
+        <br>
+        <br>
+        <h2>Welcome to our site</h2>
+        <div class="header_description_box">
+            <span class="header_description">You will find the rules of the game as well as a quiz which will allow you to unlock the skill linked to your role</span>
+        </div>
+        <br>
+        <div class="header_btn">
+            <button mat-button (click)="openDialog()">Generated a question</button>
+            <p class="header_welcome" [ngClass]="{'correct-answer': responseMessage === 'Bonne réponse !', 'incorrect-answer': responseMessage === 'Mauvaise réponse.'}">
+                {{ responseMessage }}
+            </p>
+        </div>
+    </div>
+    <div class="header_box_img">
+        <img class="header_img" src="assets/img/cards/blackHat.png" alt="BlackHat">
+    </div>
+</header>
+
+<section class="section_concept ">
+    <h2>History</h2>
+    <span class="concept_description">
+        In this game, players are users of a website under attack by hackers aiming to delete all user accounts from the site.
+        The site's users must work together to protect their accounts from hackers by exposing them. 
+        Some players are secretly "Hackers" trying to destroy the website, while others are "Users," trying to save their accounts, with some having specific roles.
+    </span>
+
+    <h2>Target Audience:</h2>
+    <span class="concept_description">
+        Suitable for players aged 14 and above, perfect for families and educational groups.
+    </span>
+</section>
+
+<section class="section_goal">
+    <h2>Goal</h2>
+    <div class="list_goal">
+        <ul>
+            <li>Hackers' Goal: Delete all user accounts from the website.</li>
+            <li>Users' Goal: Identify and eliminate Hacker accounts.</li>
+            <li>Role Distribution: Each player secretly receives a role.</li>
+            <li>Disconnection: Hackers wake up and choose which user account to delete. Other special roles (such as the Dba, for example) also perform their actions.</li>
+            <li>Connection: All users discuss to identify the Hackers and vote to delete a user account. Hackers must do everything to avoid being exposed.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section_role">
+    <h2>The Hackers</h2>
+    <div class="cards">
+        <div class="card_hacker">
+            <figure>
+                <img src="assets/img/cards/blackHat.png" alt="BlackHat">
+                <figcaption>
+                    <span class="card_title">Black hat</span>
+                    <br>
+                    <br>
+                    <span class="card_description">
+                        During disconnections, they choose which user account to delete and must not be exposed.
+                    </span>
+                </figcaption>
+            </figure>
+        
+            <figure style="--c:#fff5">
+                <img src="assets/img/cards/whiteHat.png" alt="WhiteHat">
+                <figcaption>
+                    <span class="card_title">White hat</span>
+                    <br>
+                    <br>
+                    <span class="card_description">
+                        During disconnections, they act like hackers. However, they must be the last one with an existing account and thus delete all user and hacker accounts.
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="cards">
+        <h2>The Users</h2>
+        <div class="card_user">
+            <figure style="--c:#fff5">
+                <img src="assets/img/cards/dba.png" alt="Dba">
+                <figcaption>
+                    <span class="card_title">Dba</span> 
+                    <br>
+                    <br>
+                    <span class="card_description">
+                        Knows how to execute 2 extremely powerful SQL queries: a user restoration query to save the account of the user deleted by hackers during disconnection and a user deletion query to delete a user account.
+                        The Dba must use each query only once in the game. They cannot use both queries during the same disconnection. The Dba can use the queries for their benefit and save themselves if they have just been attacked by hackers.
+                    </span>
+                </figcaption>
+            </figure>
+
+            <figure style="--c:#fff5">
+                <img src="assets/img/cards/expertCybersecurity.png" alt="Mountains">
+                <figcaption class="expert">
+                    <span class="card_title">Expert cybersecurity</span>
+                    <br>
+                    <br>
+                    <span class="card_description">
+                        The Expert cybersecurity can, by slightly opening their eyes to trace logs, spy on hackers during their connection. If caught by one of the hackers, they die immediately (silently), in place of the designated victim.
+                        The Expert cybersecurity can only spy at night, during the hackers' connection turn.
+                        They are not allowed to pretend to be a hacker and open their eyes wide.
+                    </span>
+                </figcaption>
+            </figure>
+
+            <figure style="--c:#fff5">
+                <img src="assets/img/cards/developer.png" alt="Developer">
+                <figcaption>
+                    <span class="card_title">Developer</span>
+                    <br>
+                    <br>
+                    <span class="card_description">
+                        Every night, they discover the role of a user of their choice. They must help other users but remain discreet to avoid being exposed by hackers.
+                    </span>
+                </figcaption>
+            </figure>
+
+            <figure style="--c:#fff5">
+                <img src="assets/img/cards/user.png" alt="User">
+                <figcaption>
+                    <span class="card_title">User</span>
+                    <br>
+                    <br>
+                    <span class="card_description">
+                        They have no particular skills. Their only weapons are the ability to analyze behaviors to identify hackers and the power of persuasion to prevent the execution of the innocent they are.
+                    </span>
+                </figcaption>
+            </figure>
+
+            <figure style="--c:#fff5">
+                <img src="assets/img/cards/chatGpt.png" alt="ChatGpt">
+                <figcaption>
+                    <span class="card_title">Chatgpt</span>
+                    <br>
+                    <br>
+                    <span class="card_description">
+                        On the first night, Chatgpt can steal the role of a targeted user and exchange their card with that of the targeted user.
+                        The targeted person will then become a simple user, and Chatgpt will get the role they stole.
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="section_players">
+    <h2>Recommended Number of Players</h2>
+    <app-table-mobile *ngIf="isMobile"></app-table-mobile>
+    <app-table-desktop *ngIf="!isMobile"></app-table-desktop>    
+</section>
+
+<section class="section_party">
+    <h2>Setup</h2>
+    <div class="list_goal">
+            <span>
+                A) Players designate or draw lots for a game master who does not play but directs the game. For the first few games, someone familiar with the game, someone who has deciphered the rules, or a skilled group game master will be best suited to create the best atmosphere.
+            </span>
+            <br>
+            <br>
+            <span>
+                B) The game master distributes 1 role card face down to each player. Each player discreetly looks at their role and then places their card face down in front of them.
+            </span>
+            <br>
+            <br>
+            <span>
+                C) The game master disconnects the users. The game master says, "It's night, all users log out, players lower their heads, and close their eyes."
+                Then, depending on the choice of roles in play, the game master calls out the different roles.
+            </span>
+    </div>
+    <h2>Preparation Turn</h2>
+    <div class="list_goal">
+        <ul>
+            <h3>The game master calls Chatgpt.</h3>
+            <li>
+                The game master says, "Chatgpt connects!" The player with the Chatgpt card opens their eyes and discreetly chooses a target to steal the card from. The game master says, "Chatgpt disconnects." Chatgpt closes their eyes.
+            </li>
+
+            <h3>The game master calls the Developer.</h3>
+            <li>
+                The game master says, "the Developer connects and designates a player they want to investigate!".
+                The game master shows the Developer the hidden side of the card of the player the Developer has designated. The game master says,
+                "The Developer goes back to sleep." The Developer closes their eyes.
+            </li>
+
+            <h3>The game master calls the Hacker(s).</h3>
+            <li>
+                The game master says, "the Hackers connect, recognize each other, and designate a new victim!!!".
+                The Hackers (and only they) raise their heads, open their eyes, silently consult and designate a victim.
+                During this turn, the Expert cybersecurity can spy on the Hackers by slightly opening their eyes.
+                They are not obligated to do so and are not allowed to open their eyes wide.
+                If caught, Hackers have the right to change their minds, and the Expert cybersecurity dies instead of the potentially chosen victim.
+                The game master says, "the Hackers disconnect!".
+                The Hackers close their eyes.
+            </li>
+
+            <h3>The game master calls the Dba.</h3>
+            <li>
+                The game master says, "the Dba wakes up, the game master shows them the victim of the Hackers. Will they use their user restoration or user deletion query?"
+                The Dba is not obligated to use their queries in a specific turn. If they use a query, they must indicate to the game master their target with the thumb up for account restoration or down for account deletion.
+                The game master will reveal its possible effect at the next general user connection.
+            </li>
+        </ul>
+    </div>
+    <h2>The game master connects all users</h2>
+    <div class="list_goal">
+        <span>
+            The game master says, "It's morning, you can log in, everyone logs in and opens their eyes..." The game master then designates the player(s) who have been victims of the Hackers or the Dba during the disconnection.
+            This player or these players reveal their card because they are eliminated from the game. They cannot communicate with other players in any way.
+        </span>
+    </div>
+    <h2>Users Vote</h2>
+    <div class="list_goal">
+        <span>
+            Players must eliminate a player suspected of being a Hacker.
+            At the leader's signal, each player points their finger in the direction of the player they want to eliminate.
+            The player with the majority of votes is eliminated. The Administrator's vote counts double. In case of a tie, if present, the Administrator's vote designates the victim.
+            Otherwise, players vote again.
+            If there is still a tie, no player is eliminated.
+            The eliminated player reveals their card and cannot communicate with other players in any way.
+        </span>
+    </div>
+    <h2>Users Log Out</h2>
+    <div class="list_goal">
+        <span>
+            The leader says, "It's night, users log out!" Players close their eyes.
+            (Eliminated players remain silent, especially when they find out who the Hackers really are...).
+            The game resumes at the beginning of the normal turn.
+        </span>
+    </div>
+</section>
