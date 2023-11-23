@@ -132,6 +132,65 @@ figure:hover figcaption {
     font-size: 0.8rem;
 }
 
+.header_btn {
+    width: 350px;
+    text-align: center;
+}
+
+#difficulty {
+    margin: 10px 0;
+    max-width: 250px;
+    width: 100%;
+    height: 10%;
+    padding: 10px 0;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    text-align: center; /* Centrer le texte des options */
+}
+
+button {
+    margin: 20px 0;
+    max-width: 350px;
+    width: 100%;
+    height: 10%;
+    padding: 10px 4vw;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+  
+button:hover {
+    opacity: 0.9;
+}
+
+.header_welcome {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.correct-answer {
+    font-size: 25px;
+    padding: 25px 10px;
+    border-radius: 20px;
+    background-color: green; 
+}
+  
+.incorrect-answer {
+    font-size: 25px;
+    padding: 25px 10px;
+    border-radius: 20px;
+    background-color: red; 
+}
+  
 @media screen and (max-width: 988px) {
     .header_box_img {
         display: none;
@@ -162,6 +221,10 @@ figure:hover figcaption {
     button {
         width: 80%;
     }
+
+    #difficulty {
+        max-width: 150px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -185,46 +248,3 @@ figure:hover figcaption {
         align-items: start;
     }
 }
-
-.header_btn {
-    width: 350px;
-}
-  
-button {
-    margin: 60px 0;
-    max-width: 350px;
-    width: 100%; /* Utilise une largeur maximale de 80% de la largeur de l'écran */
-    height: 10%;
-    padding: 10px 4vw; /* Utilise une valeur de padding responsive */
-    font-size: 20px; /* Utilise une taille de police responsive */
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-  
-button:hover {
-    opacity: 0.9;
-}
-
-.header_welcome {
-    color: var(--text-color);
-    text-align: center;
-}
-
-.correct-answer {
-    font-size: 25px;
-    padding: 25px 10px;
-    border-radius: 20px;
-    background-color: green; 
-}
-  
-.incorrect-answer {
-    font-size: 25px;
-    padding: 25px 10px;
-    border-radius: 20px;
-    background-color: red; 
-}
-  

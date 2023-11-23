@@ -1,5 +1,6 @@
 <div class="popup">
     <h2>{{ selectedQuestion!.text }}</h2>
+    <span>Difficulty: {{ selectedQuestion!.difficulty }}</span>
 
     <div class="btn_box" *ngIf="selectedQuestion">
       <button mat-button (click)="selectAnswer(selectedQuestion!.answers[0])">{{ selectedQuestion!.answers[0].text }}</button>

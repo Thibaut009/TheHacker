@@ -21,6 +21,10 @@ h2 {
     margin-bottom: 20px; /* Ajout de marge en bas pour l'espace */
 }
 
+span {
+    color: var(--text-color);
+}
+
 .btn_box {
     width: 60%;
     display: flex;
@@ -46,8 +50,12 @@ button:hover {
     opacity: 0.9;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 988px) {
     :host {
         height: 50%;
+    }
+    .btn_box {
+        width: 90%;
+
     }
 }

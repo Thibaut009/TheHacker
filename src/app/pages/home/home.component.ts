@@ -8,8 +8,9 @@ import { QuizzPopupComponent } from 'src/app/components/popup/quizz-popup/quizz-
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  isMobile: boolean = window.innerWidth <= 768; // Mettez la largeur que vous considérez comme mobile
+  isMobile: boolean = window.innerWidth <= 768;
   responseMessage: string | null = null;
+  selectedDifficulty: string = 'easy'; // Défaut à la difficulté facile
   
   constructor(public dialog: MatDialog) {}
 
@@ -20,9 +21,11 @@ export class HomeComponent {
 
   openDialog(): void {
     this.responseMessage = null;
-  
-    const dialogRef = this.dialog.open(QuizzPopupComponent);
-  
+
+    const dialogRef = this.dialog.open(QuizzPopupComponent, {
+      data: { difficulty: this.selectedDifficulty } // Passer la difficulté sélectionnée à la boîte de dialogue
+    });
+
     dialogRef.afterClosed().subscribe(result => {
       if (result !== undefined) {
         if (result == true) {
@@ -35,5 +38,4 @@ export class HomeComponent {
       }
     });
   }
-  
 }
