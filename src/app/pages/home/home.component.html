@@ -10,7 +10,7 @@
         <br>
         <div class="header_btn">
             <button mat-button (click)="openDialog()">Generated a question</button>
-            <p class="header_welcome" [ngClass]="{'correct-answer': responseMessage === 'Bonne réponse !', 'incorrect-answer': responseMessage === 'Mauvaise réponse.'}">
+            <p class="header_welcome" [ngClass]="{'correct-answer': responseMessage === 'Right answer !', 'incorrect-answer': responseMessage === 'Wrong answer.'}">
                 {{ responseMessage }}
             </p>
         </div>

@@ -26,12 +26,12 @@ export class HomeComponent {
     dialogRef.afterClosed().subscribe(result => {
       if (result !== undefined) {
         if (result == true) {
-          this.responseMessage = 'Bonne réponse !';
+          this.responseMessage = 'Right answer !';
         } else {
-          this.responseMessage = 'Mauvaise réponse.';
+          this.responseMessage = 'Wrong answer.';
         }
       } else {
-        this.responseMessage = "Vous n'avez pas répondu à la question.";
+        this.responseMessage = "You didn't answer the question.";
       }
     });
   }
