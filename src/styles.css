@@ -1,13 +1,33 @@
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background: var(--orange-gradient);
+    background: var(--green-gradient);
     overflow-x: hidden;
 }
 
 :root {
     --primary-color: #222222;
-    --secondary-color: rgb(255, 132, 0);
-    --orange-gradient: radial-gradient(rgb(254, 198, 156), 20%, rgb(205, 91, 4), rgb(158, 72, 6));
+    --secondary-color: rgb(4, 185, 55);
+    --green-gradient: radial-gradient(rgb(167, 254, 156), 20%, rgb(4, 185, 55), rgb(39, 97, 3));
+    /* --orange-gradient: radial-gradient(rgb(167, 254, 156), 20%, rgb(4, 205, 61), rgb(51, 128, 3)); */
     --text-color: #fff;
+}
+
+/* Custom Scrollbar Styling */
+body::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border: 3px solid var(--primary-color); /* border around the thumb */
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* color of the thumb on hover */
 }

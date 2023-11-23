@@ -19,8 +19,10 @@ export class HomeComponent {
   }
 
   openDialog(): void {
+    this.responseMessage = null;
+  
     const dialogRef = this.dialog.open(QuizzPopupComponent);
-
+  
     dialogRef.afterClosed().subscribe(result => {
       if (result !== undefined) {
         if (result == true) {
@@ -29,10 +31,9 @@ export class HomeComponent {
           this.responseMessage = 'Mauvaise réponse.';
         }
       } else {
-        // L'utilisateur n'a pas répondu
         this.responseMessage = "Vous n'avez pas répondu à la question.";
       }
-      // Ne rien faire si la boîte de dialogue est fermée sans réponse
     });
   }
+  
 }

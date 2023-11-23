@@ -9,140 +9,140 @@ import { Answer, Question } from 'src/models/quizz.model';
 })
 export class QuizzPopupComponent {
   questions: Question[] = [
-    { 
-      text: "Qu'est-ce que HTML signifie ?", 
+    {
+      text: "What does HTML stand for?",
       answers: [
         { text: 'HyperText Markup Language', isCorrect: true },
         { text: 'HighText Machine Language', isCorrect: false }
       ]
     },
-    { 
-      text: "Quelle balise est utilisée pour créer une liste ordonnée en HTML ?", 
+    {
+      text: "Which tag is used to create an ordered list in HTML?",
       answers: [
         { text: '<ul>', isCorrect: false },
         { text: '<ol>', isCorrect: true }
       ]
     },
-    { 
-      text: "Dans CSS, que signifie l'acronyme 'CSS' ?", 
+    {
+      text: "In CSS, what does the acronym 'CSS' stand for?",
       answers: [
         { text: 'Counter Strike: Source', isCorrect: false },
         { text: 'Cascading Style Sheets', isCorrect: true }
       ]
     },
-    { 
-      text: "Quel sélecteur CSS est utilisé pour sélectionner tous les éléments ?", 
+    {
+      text: "Which CSS selector is used to select all elements?",
       answers: [
-        { text: '*', isCorrect: true },
-        { text: '#', isCorrect: false }
+        { text: '#', isCorrect: false },
+        { text: '*', isCorrect: true }
       ]
     },
-    { 
-      text: "Quel attribut HTML est utilisé pour définir le texte alternatif d'une image ?", 
+    {
+      text: "Which HTML attribute is used to define the alternative text for an image?",
       answers: [
         { text: 'alt', isCorrect: true },
         { text: 'src', isCorrect: false }
       ]
     },
-    { 
-      text: "En CSS, quel attribut est utilisé pour définir la couleur du texte ?", 
+    {
+      text: "In CSS, which attribute is used to define the text color?",
       answers: [
-        { text: 'color', isCorrect: true },
-        { text: 'font-size', isCorrect: false }
+        { text: 'font-size', isCorrect: false },
+        { text: 'color', isCorrect: true }
       ]
     },
-    { 
-      text: "Quelle balise HTML est utilisée pour créer un lien hypertexte ?", 
+    {
+      text: "Which HTML tag is used to create a hyperlink?",
       answers: [
-        { text: '<a>', isCorrect: true },
-        { text: '<p>', isCorrect: false }
+        { text: '<p>', isCorrect: false },
+        { text: '<a>', isCorrect: true }
       ]
     },
-    { 
-      text: "Quel sélecteur CSS est utilisé pour sélectionner un élément avec une classe spécifique ?", 
+    {
+      text: "Which CSS selector is used to select an element with a specific class?",
       answers: [
-        { text: '.ma-classe', isCorrect: true },
+        { text: '.ma-class', isCorrect: true },
         { text: '#mon-id', isCorrect: false }
       ]
     },
-    { 
-      text: "Quel attribut HTML est utilisé pour définir un titre à une page web ?", 
+    {
+      text: "Which HTML attribute is used to define a title for a web page?",
       answers: [
         { text: 'title', isCorrect: true },
         { text: 'head', isCorrect: false }
       ]
     },
-    { 
-      text: "En CSS, quelle propriété est utilisée pour définir la taille de la police ?", 
+    {
+      text: "In CSS, which property is used to define the font size?",
       answers: [
-        { text: 'font-size', isCorrect: true },
-        { text: 'text-align', isCorrect: false }
+        { text: 'text-align', isCorrect: false },
+        { text: 'font-size', isCorrect: true }
       ]
     },
-    { 
-      text: "Quel élément HTML est utilisé pour créer un paragraphe ?", 
+    {
+      text: "Which HTML element is used to create a paragraph?",
       answers: [
         { text: '<p>', isCorrect: true },
         { text: '<span>', isCorrect: false }
       ]
     },
-    { 
-      text: "Quelle propriété CSS est utilisée pour définir la couleur d'arrière-plan ?", 
+    {
+      text: "Which CSS property is used to define the background color?",
       answers: [
         { text: 'background-color', isCorrect: true },
         { text: 'color', isCorrect: false }
       ]
     },
-    { 
-      text: "Quelle balise HTML est utilisée pour créer une liste non ordonnée ?", 
+    {
+      text: "Which HTML tag is used to create an unordered list?",
       answers: [
         { text: '<ul>', isCorrect: true },
         { text: '<ol>', isCorrect: false }
       ]
     },
-    { 
-      text: "Quel sélecteur CSS est utilisé pour sélectionner un élément avec un ID spécifique ?", 
+    {
+      text: "Which CSS selector is used to select an element with a specific ID?",
       answers: [
         { text: '#mon-id', isCorrect: true },
         { text: '.ma-classe', isCorrect: false }
       ]
     },
-    { 
-      text: "Quelle est la dernière version de HTML ?", 
+    {
+      text: "What is the latest version of HTML?",
       answers: [
-        { text: 'HTML5', isCorrect: true },
-        { text: 'XHTML', isCorrect: false }
+        { text: 'XHTML', isCorrect: false },
+        { text: 'HTML5', isCorrect: true }
       ]
     },
-    { 
-      text: "Quel attribut HTML est utilisé pour définir du texte en italique ?", 
+    {
+      text: "Which HTML attribute is used to define text in italics?",
       answers: [
         { text: 'class', isCorrect: false },
         { text: 'style', isCorrect: true }
       ]
     },
-    { 
-      text: "En CSS, quelle propriété est utilisée pour centrer un élément horizontalement ?", 
+    {
+      text: "In CSS, which property is used to center an element horizontally?",
       answers: [
         { text: 'text-align', isCorrect: true },
         { text: 'margin', isCorrect: false }
       ]
     },
-    { 
-      text: "Quelle balise HTML est utilisée pour créer un lien vers un fichier externe ?", 
+    {
+      text: "Which HTML tag is used to create a link to an external file?",
       answers: [
         { text: '<link>', isCorrect: true },
         { text: '<a>', isCorrect: false }
       ]
     },
-    { 
-      text: "Quel sélecteur CSS est utilisé pour sélectionner tous les éléments enfants d'un élément spécifique ?", 
+    {
+      text: "Which CSS selector is used to select all child elements of a specific element?",
       answers: [
         { text: '>', isCorrect: false },
         { text: '*', isCorrect: true }
       ]
     },
-    // Ajoutez autant de questions que nécessaire
+    // Add as many questions as needed
   ];
 
   selectedQuestion: Question | null = null;

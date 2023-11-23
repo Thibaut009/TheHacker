@@ -93,7 +93,7 @@ figure {
     width: 20rem;
     height: 20rem;
     margin: 0.5rem;
-    background: var(--orange-gradient);
+    background: var(--green-gradient);
 }
 
 figure > * {
@@ -121,7 +121,7 @@ figure figcaption {
 
 figure:hover figcaption {
     --_i: 0%;
-    background: var(--orange-gradient);
+    background: var(--green-gradient);
 }
 
 .card_title {
