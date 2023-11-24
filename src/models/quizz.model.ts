@@ -5,6 +5,6 @@ export interface Answer {
 
 export interface Question {
   text: string;
-  difficulty: string; // Ajout de la propriété difficulty
+  difficulty: string;
   answers: Answer[];
 }

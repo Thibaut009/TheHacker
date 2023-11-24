@@ -7,8 +7,34 @@
 }
 
 h1 {
+    position: relative;
     color: var(--text-color);
     font-size: 3.5rem;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    opacity: 1;
+    letter-spacing: 5px;
+}
+  
+h1::before,
+h1::after {
+    content: attr(data-content);
+    position: absolute;
+    z-index: 2;
+    color: var(--text-color);
+}
+  
+h1::before {
+    top: 5px;
+    left: 3px;
+    opacity: 0.6;
+}
+  
+h1::after {
+    top: 10px;
+    left: 8px;
+    opacity: 0.4;
 }
 
 h2, span {
@@ -154,10 +180,10 @@ figure:hover figcaption {
 
 button {
     margin: 20px 0;
-    max-width: 350px;
+    max-width: 400px;
     width: 100%;
     height: 10%;
-    padding: 10px 4vw;
+    padding: 10px 3vw;
     font-size: 20px;
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -200,11 +226,14 @@ button:hover {
         width: 100%;
         height: 80vh;
         padding: 0px;
+        flex-direction: column; /* Changer la direction à une colonne pour les écrans plus petits */
     }
     
     .header_content {
         padding-left: 0rem;
         text-align: center;
+        width: 100%; /* Ajustez à 100% pour occuper toute la largeur */
+        order: 1;
     }
 
     .header_description_box {
@@ -225,25 +254,7 @@ button:hover {
     #difficulty {
         max-width: 150px;
     }
-}
 
-@media screen and (max-width: 768px) {
-    .section_header {
-        flex-direction: column; /* Changer la direction à une colonne pour les écrans plus petits */
-    }
-
-    .header_content {
-        width: 100%; /* Ajustez à 100% pour occuper toute la largeur */
-        order: 1;
-
-    }
-
-    .header_box_img {
-        order: 2;
-    }
-}
-
-@media screen and (max-width: 600px) {
     figure figcaption {
         align-items: start;
     }

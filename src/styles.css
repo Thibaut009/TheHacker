@@ -1,6 +1,14 @@
+@font-face {
+    font-family: 'BlackOpsOne-Regular';
+    src: url('./assets/fonts/BlackOpsOne-Regular.ttf');
+}
+
+* {
+    font-family: BlackOpsOne-Regular, sans-serif;
+}
+
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
     background: var(--green-gradient);
     overflow-x: hidden;
 }
@@ -9,7 +17,6 @@ body {
     --primary-color: #222222;
     --secondary-color: rgb(4, 185, 55);
     --green-gradient: radial-gradient(rgb(167, 254, 156), 20%, rgb(4, 185, 55), rgb(39, 97, 3));
-    /* --orange-gradient: radial-gradient(rgb(167, 254, 156), 20%, rgb(4, 205, 61), rgb(51, 128, 3)); */
     --text-color: #fff;
 }
 
